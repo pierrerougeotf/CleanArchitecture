@@ -22,3 +22,8 @@ typealias Stack = Repositories.Stack
 
 typealias NumberRequirement = Repositories.NumberRequirement
 typealias OperationRequirement = Repositories.OperationRequirement
+
+import Entities
+
+typealias Operation = Entities.Operation
+typealias Number = Entities.Number

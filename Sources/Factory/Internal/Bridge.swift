@@ -5,8 +5,12 @@
 //  Created by Pierre Rougeot on 12/08/2022.
 //
 
+import Presenters
+
+typealias EnterNumberInteractorRequirement = Presenters.EnterNumberInteractorRequirement
+typealias EnterOperationInteractorRequirement = Presenters.EnterOperationInteractorRequirement
+
 import Interactors
-import IOKit
 
 typealias EnterOperation = Interactors.EnterOperation
 typealias EnterNumber = Interactors.EnterNumber

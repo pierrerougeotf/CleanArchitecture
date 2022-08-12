@@ -6,23 +6,17 @@ import PackageDescription
 let package = Package(
     name: "CleanArchitecture",
     products: [
-        // Products define the executables and libraries a package produces, and make them visible to other packages.
         .library(
             name: "Calculator",
             targets: ["Factory"]),
     ],
-    dependencies: [
-        // Dependencies declare other packages that this package depends on.
-        // .package(url: /* package url */, from: "1.0.0"),
-    ],
     targets: [
-        // Targets are the basic building blocks of a package. A target can define a module or a test suite.
-        // Targets can depend on other targets in this package, and on products in packages this package depends on.
-        .target(name: "Factory", dependencies: ["Interactors", "Repositories", "Entities"]),
-        .target(name: "Repositories"),
-        .testTarget(name: "RepositoriesTests", dependencies: ["Repositories"]),
+        .target(name: "Factory", dependencies: ["Presenters", "Interactors", "Repositories", "Entities"]),
+        .target(name: "Presenters"),
         .target(name: "Interactors"),
         .testTarget(name: "InteractorsTests", dependencies: ["Interactors"]),
+        .target(name: "Repositories"),
+        .testTarget(name: "RepositoriesTests", dependencies: ["Repositories"]),
         .target(name: "Entities")
     ]
 )

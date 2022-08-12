@@ -6,4 +6,5 @@
 //
 
 extension Stack: StackRepositoryRequirement {}
+extension Stack: EnterNumberInteractorRequirement { public func execute(number: Number) { push(number: number) } }
 extension Computation: ComputationRepositoryRequirement {}

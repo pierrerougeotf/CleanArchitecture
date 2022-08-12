@@ -7,7 +7,7 @@
 
 public protocol OperationRequirement {
     static var plus: Self { get }
-    static var minus: Self { get}
-    static var multiply: Self { get}
-    static var divide : Self { get}
+    static var minus: Self { get }
+    static var multiply: Self { get }
+    static var divide : Self { get }
 }

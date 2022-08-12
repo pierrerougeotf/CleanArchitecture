@@ -5,8 +5,10 @@
 //  Created by Pierre Rougeot on 06/08/2022.
 //
 
-public class EnterOperation<StackRepository: StackRepositoryRequirement, ComputationRepository: ComputationRepositoryRequirement>
-where StackRepository.Number == ComputationRepository.Number {
+public class EnterOperation<
+    StackRepository: StackRepositoryRequirement,
+    ComputationRepository: ComputationRepositoryRequirement
+> where StackRepository.Number == ComputationRepository.Number {
     public typealias Operation = ComputationRepository.Operation
     public typealias Number = ComputationRepository.Number
     

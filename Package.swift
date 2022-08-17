@@ -13,6 +13,7 @@ let package = Package(
     targets: [
         .target(name: "Factory", dependencies: ["Presenters", "Interactors", "Repositories", "Entities"]),
         .target(name: "Presenters"),
+        .testTarget(name: "PresentersTests", dependencies: ["Presenters"]),
         .target(name: "Interactors"),
         .testTarget(name: "InteractorsTests", dependencies: ["Interactors"]),
         .target(name: "Repositories"),

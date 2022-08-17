@@ -10,9 +10,9 @@ class InteractorsIDI {
     
     init(repositoriesIDI: RepositoriesIDI) { self.repositoriesIDI = repositoriesIDI }
     
-    lazy var enterNumber = repositoriesIDI.stack
+    lazy var enterNumber = EnterNumberInteractor(pushStackRepository: repositoriesIDI.stack)
     
-    lazy var enterOperation = EnterOperation(
+    lazy var enterOperation = EnterOperationInteractor(
         stackRepository: repositoriesIDI.stack,
         computationRepository: repositoriesIDI.computation
     )

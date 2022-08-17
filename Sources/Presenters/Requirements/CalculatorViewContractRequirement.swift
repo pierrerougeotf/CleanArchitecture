@@ -9,7 +9,7 @@ public protocol CalculatorViewModel {
     init(display: String)
 }
 
-public protocol CalculatorViewModelRequirement {
+public protocol CalculatorViewContractRequirement: AnyObject {
     associatedtype ViewModel: CalculatorViewModel
     func display(viewModel: ViewModel)
 }

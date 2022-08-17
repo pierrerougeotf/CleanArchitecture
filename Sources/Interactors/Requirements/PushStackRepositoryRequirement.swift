@@ -8,5 +8,3 @@ public protocol PushStackRepositoryRequirement: AnyObject {
     associatedtype Number
     func push(number: Number)
 }
-
-

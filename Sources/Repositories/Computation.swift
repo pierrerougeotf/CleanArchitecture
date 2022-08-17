@@ -5,7 +5,7 @@
 //  Created by Pierre Rougeot on 06/08/2022.
 //
 
-public struct Computation<Number: NumberRequirement, Operation: OperationRequirement & Equatable> {
+public struct Computation<Number: NumberRequirement, Operation: OperationRequirement> {
     public enum Error: String, Swift.Error {
         case zeroDivision
         case overflow
@@ -14,7 +14,7 @@ public struct Computation<Number: NumberRequirement, Operation: OperationRequire
 
     public init() { }
 
-    // MARK: - ComputationRepository
+    // MARK: - ComputationRepositoryRequirement
 
     public func perform(operation: Operation, on firstOperand: Number, and secondOperand: Number) throws -> Number {
         let numberOperation: (Number) -> (Number) -> (partialValue: Number, overflow: Bool)
@@ -40,7 +40,7 @@ public struct Computation<Number: NumberRequirement, Operation: OperationRequire
     }
 }
 
-private extension OperationRequirement where Self: Equatable {
+private extension OperationRequirement {
     static func ~=(pattern: Self, value: Self) -> Bool {
         return value == pattern
     }

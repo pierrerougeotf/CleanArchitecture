@@ -96,5 +96,5 @@ class CalculatorPresenterTests: XCTestCase {
 extension CalculatorPresenterTests.EnterNumberInteractor: EnterNumberInteractorRequirement {}
 extension CalculatorPresenterTests.Operation: OperationRequirement {}
 extension CalculatorPresenterTests.EnterOperationInteractor: EnterOperationInteractorRequirement {}
-extension CalculatorPresenterTests.ViewModel: CalculatorViewModel {}
+extension CalculatorPresenterTests.ViewModel: CalculatorViewModelRequirement {}
 extension CalculatorPresenterTests.CalculatorViewContract: CalculatorViewContractRequirement {}

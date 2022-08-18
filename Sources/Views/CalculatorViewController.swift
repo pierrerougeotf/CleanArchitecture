@@ -8,10 +8,9 @@
 #if canImport(UIKit)
 import UIKit
 
-open class CalculatorViewController<ViewModel: CalculatorViewModelRequirement,
-                                    Presenter: CalculatorPresenterRequirement>: UIViewController {
+open class CalculatorViewController<ViewModel: CalculatorViewModelRequirement>: UIViewController {
 
-    public var presenter: Presenter?
+    public var presenter: CalculatorPresenterRequirement?
 
     public func configure(with viewModel: ViewModel) {
         resultLabel.text = viewModel.display
@@ -75,9 +74,8 @@ open class CalculatorViewController<ViewModel: CalculatorViewModelRequirement,
 }
 
 private extension UIStackView {
-    func addLine<ViewModel: CalculatorViewModelRequirement,
-                 Presenter: CalculatorPresenterRequirement>(_ buttonViewModels: (String, UIColor)...,
-                                                            handledBy handler: CalculatorViewController<ViewModel, Presenter>) {
+    func addLine<ViewModel: CalculatorViewModelRequirement>(_ buttonViewModels: (String, UIColor)...,
+                                                            handledBy handler: CalculatorViewController<ViewModel>) {
         let stackView = UIStackView()
         stackView.axis = .horizontal
         stackView.spacing = 8.0
@@ -93,7 +91,7 @@ private extension UIStackView {
             } else {
                 button.titleLabel?.font = .preferredFont(forTextStyle: .title1)
             }
-            button.addTarget(handler, action: #selector(CalculatorViewController<ViewModel, Presenter>.didPressButton(_:)), for: .touchUpInside)
+            button.addTarget(handler, action: #selector(CalculatorViewController<ViewModel>.didPressButton(_:)), for: .touchUpInside)
             stackView.addArrangedSubview(button)
         }
 

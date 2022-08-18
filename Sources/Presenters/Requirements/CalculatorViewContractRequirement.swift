@@ -5,11 +5,11 @@
 //  Created by Pierre Rougeot on 12/08/2022.
 //
 
-public protocol CalculatorViewModel {
+public protocol CalculatorViewModelRequirement {
     init(display: String)
 }
 
 public protocol CalculatorViewContractRequirement: AnyObject {
-    associatedtype ViewModel: CalculatorViewModel
+    associatedtype ViewModel: CalculatorViewModelRequirement
     func display(viewModel: ViewModel)
 }

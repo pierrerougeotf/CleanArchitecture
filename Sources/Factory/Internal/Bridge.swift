@@ -34,8 +34,18 @@ typealias CalculatorPresenter = Presenters.CalculatorPresenter
 
 typealias EnterNumberInteractorRequirement = Presenters.EnterNumberInteractorRequirement
 typealias EnterOperationInteractorRequirement = Presenters.EnterOperationInteractorRequirement
-typealias CalculatorViewContractRequirement = Presenters.CalculatorViewContractRequirement
+public typealias CalculatorViewContractRequirement = Presenters.CalculatorViewContractRequirement
+
+import ViewModels
+
+typealias CalculatorViewModel = ViewModels.Calculator
 
 import Views
 
 typealias CalculatorPresenterRequirement = Views.CalculatorPresenterRequirement
+
+public typealias CalculatorViewModelRequirement = Presenters.CalculatorViewModelRequirement & Views.CalculatorViewModelRequirement
+
+#if canImport(UIKit)
+public typealias CalculatorViewController = Views.CalculatorViewController
+#endif

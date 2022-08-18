@@ -35,3 +35,7 @@ typealias CalculatorPresenter = Presenters.CalculatorPresenter
 typealias EnterNumberInteractorRequirement = Presenters.EnterNumberInteractorRequirement
 typealias EnterOperationInteractorRequirement = Presenters.EnterOperationInteractorRequirement
 typealias CalculatorViewContractRequirement = Presenters.CalculatorViewContractRequirement
+
+import Views
+
+typealias CalculatorPresenterRequirement = Views.CalculatorPresenterRequirement

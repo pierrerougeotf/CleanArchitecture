@@ -11,7 +11,8 @@ let package = Package(
             targets: ["Factory"]),
     ],
     targets: [
-        .target(name: "Factory", dependencies: ["Presenters", "Interactors", "Repositories", "Entities"]),
+        .target(name: "Factory", dependencies: ["Views", "Presenters", "Interactors", "Repositories", "Entities"]),
+        .target(name: "Views"),
         .target(name: "Presenters"),
         .testTarget(name: "PresentersTests", dependencies: ["Presenters"]),
         .target(name: "Interactors"),

@@ -12,7 +12,7 @@ class PresentersIDI {
         self.interactorsIDI = interactorsIDI
     }
     
-    func calculator<ViewContract: CalculatorViewContractRequirement>(for viewContract: ViewContract) -> some CalculatorPresenterProtocol {
+    func calculator<ViewContract: CalculatorViewContractRequirement>(for viewContract: ViewContract) -> some CalculatorPresenterRequirement {
       CalculatorPresenter(
             enterNumberInteractor: interactorsIDI.enterNumber,
             enterOperationInteractor: interactorsIDI.enterOperation,
@@ -21,10 +21,4 @@ class PresentersIDI {
     }
 }
 
-// Temporary
-public protocol CalculatorPresenterProtocol: AnyObject {
-    func didTouchButton(_ title: String)
-}
-
-extension CalculatorPresenter: CalculatorPresenterProtocol {}
-
+extension CalculatorPresenter: CalculatorPresenterRequirement {}

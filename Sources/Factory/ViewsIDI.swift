@@ -9,7 +9,7 @@
 import UIKit
 #endif
 
-class ViewsIDI {
+public class ViewsIDI {
     private let presentersIDI: PresentersIDI
     
     init(presentersIDI: PresentersIDI) {
@@ -17,10 +17,16 @@ class ViewsIDI {
     }
     
     #if canImport(UIKit)
-    lazy var uiKitCalculator: UIViewController = {
+    public lazy var uiKitCalculator: UIViewController = {
         let calculatorViewController = CalculatorViewController<CalculatorViewModel>()
         calculatorViewController.presenter = presentersIDI.calculator(for: calculatorViewController)
         return calculatorViewController
     }()
     #endif
 }
+
+let repositoriesIDI = RepositoriesIDI()
+let interactorsIDI = InteractorsIDI(repositoriesIDI: repositoriesIDI)
+let presentersIDI = PresentersIDI(interactorsIDI: interactorsIDI)
+
+public let viewsIDI = ViewsIDI(presentersIDI: presentersIDI)

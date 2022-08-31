@@ -38,8 +38,4 @@ public class ViewsIDI {
     #endif
 }
 
-let repositoriesIDI = RepositoriesIDI()
-let interactorsIDI = InteractorsIDI(repositoriesIDI: repositoriesIDI)
-let presentersIDI = PresentersIDI(interactorsIDI: interactorsIDI)
-
 public let viewsIDI = ViewsIDI(presentersIDI: presentersIDI)

@@ -7,8 +7,8 @@
 
 import Entities
 
-typealias Operation = Entities.Operation
-typealias Number = Entities.Number
+public typealias Operation = Entities.Operation
+public typealias Number = Entities.Number
 
 import Repositories
 
@@ -32,8 +32,8 @@ import Presenters
 
 typealias CalculatorPresenter = Presenters.CalculatorPresenter
 
-typealias EnterNumberInteractorRequirement = Presenters.EnterNumberInteractorRequirement
-typealias EnterOperationInteractorRequirement = Presenters.EnterOperationInteractorRequirement
+public typealias EnterNumberInteractorRequirement = Presenters.EnterNumberInteractorRequirement
+public typealias EnterOperationInteractorRequirement = Presenters.EnterOperationInteractorRequirement
 public typealias CalculatorViewContractRequirement = Presenters.CalculatorViewContractRequirement
 
 import ViewModels

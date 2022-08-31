@@ -5,7 +5,7 @@
 //  Created by Pierre Rougeot on 12/08/2022.
 //
 
-class InteractorsIDI {
+public class InteractorsIDI {
     private let repositoriesIDI: RepositoriesIDI
     
     init(repositoriesIDI: RepositoriesIDI) { self.repositoriesIDI = repositoriesIDI }
@@ -17,3 +17,7 @@ class InteractorsIDI {
         computationRepository: repositoriesIDI.computation
     )
 }
+
+let interactorsIDI = InteractorsIDI(repositoriesIDI: repositoriesIDI)
+public let enterNumberInteractor = interactorsIDI.enterNumber
+public let enterOperationInteractor = interactorsIDI.enterOperation

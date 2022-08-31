@@ -23,4 +23,4 @@ class PresentersIDI {
     }
 }
 
-extension CalculatorPresenter: CalculatorPresenterRequirement {}
+let presentersIDI = PresentersIDI(interactorsIDI: interactorsIDI)

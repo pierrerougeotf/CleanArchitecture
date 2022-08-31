@@ -6,3 +6,4 @@
 //
 
 extension Operation: OperationRequirement {}
+// extension Number: NumberRequirement

@@ -9,3 +9,5 @@ class RepositoriesIDI {
     let stack = StackRepository<Number>()
     let computation = ComputationRepository<Number, Operation>()
 }
+
+let repositoriesIDI = RepositoriesIDI()

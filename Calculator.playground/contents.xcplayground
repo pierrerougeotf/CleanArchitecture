@@ -3,5 +3,6 @@
     <pages>
         <page name='UIKit View'/>
         <page name='UIKit Calculator'/>
+        <page name='SwiftUI Calculator'/>
     </pages>
 </playground>

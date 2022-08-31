@@ -5,10 +5,11 @@ import PackageDescription
 
 let package = Package(
     name: "CleanArchitecture",
+    platforms: [.macOS(.v12), .iOS(.v13), .watchOS(.v8), .tvOS(.v15)],
     products: [
         .library(
             name: "Calculator",
-            targets: ["Factory"]),
+            targets: ["Factory", "Views"]), // SwiftUI Preview does not seem to work without adding "Views" in products
     ],
     targets: [
         .target(

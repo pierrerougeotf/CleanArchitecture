@@ -6,11 +6,9 @@
 //
 
 #if canImport(UIKit)
-
 extension CalculatorViewController: CalculatorViewContractRequirement where ViewModel: CalculatorViewModelRequirement {
     public func display(viewModel: ViewModel) {
         configure(with: viewModel)
     }
 }
-
 #endif

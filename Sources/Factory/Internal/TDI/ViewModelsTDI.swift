@@ -6,3 +6,9 @@
 //
 
 extension CalculatorViewModel: CalculatorViewModelRequirement {}
+
+extension CalculatorViewModel: CalculatorViewContractRequirement {
+    public func display(viewModel: CalculatorViewModel) {
+        self.display = viewModel.display
+    }
+}

@@ -1,6 +1,6 @@
 //
 //  ViewsIDI.swift
-//  
+//
 //
 //  Created by Pierre Rougeot on 18/08/2022.
 //
@@ -9,8 +9,15 @@
 import UIKit
 #endif
 
+#if canImport(SwiftUI)
+import SwiftUI
+#endif
+
+import Views
+
 public class ViewsIDI {
     private let presentersIDI: PresentersIDI
+    private let viewModel = CalculatorViewModel(display: "0")
     
     init(presentersIDI: PresentersIDI) {
         self.presentersIDI = presentersIDI
@@ -22,6 +29,12 @@ public class ViewsIDI {
         calculatorViewController.presenter = presentersIDI.calculator(for: calculatorViewController)
         return calculatorViewController
     }()
+    
+    #if canImport(SwiftUI)
+    public lazy var swiftUICalculator: UIViewController = UIHostingController(
+        rootView: CalculatorView(presenter: presentersIDI.calculator(for: viewModel), viewModel: viewModel)
+    )
+    #endif
     #endif
 }
 

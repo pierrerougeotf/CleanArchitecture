@@ -23,7 +23,7 @@ import Interactors
 
 typealias EnterOperationInteractor = Interactors.EnterOperation
 typealias EnterNumberInteractor = Interactors.EnterNumber
-//
+
 typealias PushStackRepositoryRequirement = Interactors.PushStackRepositoryRequirement
 typealias StackRepositoryRequirement = Interactors.StackRepositoryRequirement
 typealias ComputationRepositoryRequirement = Interactors.ComputationRepositoryRequirement
@@ -38,7 +38,7 @@ public typealias CalculatorViewContractRequirement = Presenters.CalculatorViewCo
 
 import ViewModels
 
-typealias CalculatorViewModel = ViewModels.Calculator
+public typealias CalculatorViewModel = ViewModels.Calculator
 
 import Views
 

@@ -1,7 +1,5 @@
 //: [Previous](@previous)
 
-import UIKit
-
 import PlaygroundSupport
 
 import Views

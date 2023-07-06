@@ -43,7 +43,7 @@ class EnterNumberTests: XCTestCase {
 
 // Assembly
 
-extension EnterNumberTests.Stack: PushStackRepositoryRequirement { }
+extension EnterNumberTests.Stack: PushStackRequirement { }
 extension EnterNumberTests.Stack {
     public func execute(number: Number) { push(number: number) }
 }

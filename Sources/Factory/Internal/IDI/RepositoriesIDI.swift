@@ -6,8 +6,8 @@
 //
 
 class RepositoriesIDI {
-    let stack = StackRepository<Number>()
-    let computation = ComputationRepository<Number, Operation>()
+    let stack = StackRepositoryImplementation<Number>()
+    let computation = ComputationRepositoryImplementation<Number, Operation>()
 }
 
 let repositoriesIDI = RepositoriesIDI()

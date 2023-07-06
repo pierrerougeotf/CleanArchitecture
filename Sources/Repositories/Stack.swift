@@ -12,13 +12,13 @@ public final class Stack<Number> {
 
     public init() { }
 
-    // MARK: - PushStackRepositoryRequirement
+    // MARK: - PushStackRequirement
 
     public func push(number: Number) {
         numbers.append(number)
     }
 
-    // MARK: - StackRepositoryRequirement
+    // MARK: - StackRequirement
     
     public func pop() throws -> Number {
         guard let number = numbers.popLast() else {

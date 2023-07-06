@@ -6,8 +6,8 @@
 //
 
 public class CalculatorPresenter<
-    EnterNumberInteractor: EnterNumberInteractorRequirement,
-    EnterOperationInteractor: EnterOperationInteractorRequirement,
+    EnterNumberInteractor: EnterNumberRequirement,
+    EnterOperationInteractor: EnterOperationRequirement,
     ViewContract: CalculatorViewContractRequirement
 >
 where EnterNumberInteractor.Number == EnterOperationInteractor.Number,

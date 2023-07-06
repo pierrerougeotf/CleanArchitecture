@@ -14,7 +14,7 @@ public struct Computation<Number: NumberRequirement, Operation: OperationRequire
 
     public init() { }
 
-    // MARK: - ComputationRepositoryRequirement
+    // MARK: - ComputationRequirement
 
     public func perform(operation: Operation, on firstOperand: Number, and secondOperand: Number) throws -> Number {
         let numberOperation: (Number) -> (Number) -> (partialValue: Number, overflow: Bool)

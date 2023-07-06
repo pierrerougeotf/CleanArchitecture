@@ -5,7 +5,7 @@
 //  Created by Pierre Rougeot on 06/08/2022.
 //
 
-public class EnterNumber<PushStackRepository: PushStackRepositoryRequirement> {
+public class EnterNumber<PushStackRepository: PushStackRequirement> {
     
     public typealias Number = PushStackRepository.Number
     

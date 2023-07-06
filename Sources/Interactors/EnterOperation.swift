@@ -6,8 +6,8 @@
 //
 
 public class EnterOperation<
-    StackRepository: StackRepositoryRequirement,
-    ComputationRepository: ComputationRepositoryRequirement
+    StackRepository: StackRequirement,
+    ComputationRepository: ComputationRequirement
 > where StackRepository.Number == ComputationRepository.Number {
     public typealias Operation = ComputationRepository.Operation
     public typealias Number = ComputationRepository.Number

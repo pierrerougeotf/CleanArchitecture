@@ -12,10 +12,10 @@ class PresentersIDI {
         self.interactorsIDI = interactorsIDI
     }
     
-    func calculator<ViewContract: CalculatorViewContractRequirement>(
+    func calculator<ViewContract: CalculatorViewContract>(
         for viewContract: ViewContract
-    ) -> some CalculatorPresenterRequirement {
-      CalculatorPresenter(
+    ) -> some CalculatorPresenter {
+      CalculatorPresenterImplementation(
             enterNumberInteractor: interactorsIDI.enterNumber,
             enterOperationInteractor: interactorsIDI.enterOperation,
             viewContract: viewContract

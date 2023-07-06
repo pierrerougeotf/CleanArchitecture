@@ -12,29 +12,29 @@ public typealias Number = Entities.Number
 
 import Repositories
 
-typealias ComputationRepository = Repositories.Computation
-typealias PushStackRepository = Repositories.Stack
-typealias StackRepository = Repositories.Stack
+typealias ComputationRepositoryImplementation = Repositories.Computation
+typealias PushStackRepositoryImplementation = Repositories.Stack
+typealias StackRepositoryImplementation = Repositories.Stack
 
-typealias NumberRequirement = Repositories.NumberRequirement
-typealias OperationRequirement = Repositories.OperationRequirement & Presenters.OperationRequirement
+typealias NumberEntity = Repositories.NumberRequirement
+typealias OperationEntity = Repositories.OperationRequirement & Presenters.OperationRequirement
 
 import Interactors
 
-typealias EnterOperationInteractor = Interactors.EnterOperation
-typealias EnterNumberInteractor = Interactors.EnterNumber
+typealias EnterOperationInteractorImplementation = Interactors.EnterOperation
+typealias EnterNumberInteractorImplementation = Interactors.EnterNumber
 
-typealias PushStackRepositoryRequirement = Interactors.PushStackRepositoryRequirement
-typealias StackRepositoryRequirement = Interactors.StackRepositoryRequirement
-typealias ComputationRepositoryRequirement = Interactors.ComputationRepositoryRequirement
+typealias PushStackRepository = Interactors.PushStackRequirement
+typealias StackRepository = Interactors.StackRequirement
+typealias ComputationRepository = Interactors.ComputationRequirement
 
 import Presenters
 
-typealias CalculatorPresenter = Presenters.CalculatorPresenter
+typealias CalculatorPresenterImplementation = Presenters.CalculatorPresenter
 
-public typealias EnterNumberInteractorRequirement = Presenters.EnterNumberInteractorRequirement
-public typealias EnterOperationInteractorRequirement = Presenters.EnterOperationInteractorRequirement
-public typealias CalculatorViewContractRequirement = Presenters.CalculatorViewContractRequirement
+public typealias EnterNumberInteractor = Presenters.EnterNumberRequirement
+public typealias EnterOperationInteractor = Presenters.EnterOperationRequirement
+public typealias CalculatorViewContract = Presenters.CalculatorViewContractRequirement
 
 import ViewModels
 
@@ -42,7 +42,7 @@ public typealias CalculatorViewModel = ViewModels.Calculator
 
 import Views
 
-typealias CalculatorPresenterRequirement = Views.CalculatorPresenterRequirement
+typealias CalculatorPresenter = Views.CalculatorPresenterRequirement
 
 public typealias CalculatorViewModelRequirement = Presenters.CalculatorViewModelRequirement & Views.CalculatorViewModelRequirement
 

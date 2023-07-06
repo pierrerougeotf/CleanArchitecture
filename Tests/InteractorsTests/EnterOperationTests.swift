@@ -81,6 +81,6 @@ class EnterOperationTests: XCTestCase {
     }
 }
 
-extension EnterOperationTests.Stack: StackRepositoryRequirement { }
-extension EnterOperationTests.Computation: ComputationRepositoryRequirement { }
+extension EnterOperationTests.Stack: StackRequirement { }
+extension EnterOperationTests.Computation: ComputationRequirement { }
 
